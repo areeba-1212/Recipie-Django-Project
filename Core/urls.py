@@ -22,10 +22,12 @@ from home.views import *
 from vege.views import *
 urlpatterns = [
     path('',home,name="home"),
+    path('admin/', admin.site.urls),  # Add this line
     path('recipies/',recipies,name="recipies"),
     path('contact/',contact,name="contact"),
     path('about/',about,name="about"),
-    path('login/',login_page,name="login"),
+    path('logout/',logout_page,name='logout_page'),
+    path('login/', login_page, name='login'),
     path('register/',register,name="register"),
     path('update_receipe/<int:id>',update_receipe,name=""),
     path('delete_recipie/<int:id>',delete_recipie,name="")
